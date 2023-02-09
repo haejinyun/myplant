@@ -37,7 +37,47 @@ export const Item = styled.div`
 	}
 `;
 
-export const Categorys = styled.div`
-	//이걸로 카테고리 클릭 되는 애들 일정 간격으로 벌리고 싶었는데 div가 끝까지 안감.
-	//display: block;
+export const TotalPlant = styled.div`
+	display: grid;
+	margin: 0 auto;
+	//place-items: center;
+	width: 80%;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px 40px;
+	margin-top: 50px;
+	margin-bottom: 100px;
+`;
+
+export const Items = styled.div`
+	place-items: center;
+	overflow: hidden;
+	font-size: 13px;
+	line-height: 1.4;
+	//position: relative;
+`;
+
+export const EachItem = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	//position: relative;
+`;
+
+export const Name = styled.div`
+	//display: flex;
+	//flex-direction: column;
+	//align-items: center;
+	text-align: center;
+	//position: relative;
+`;
+
+export const ItemsImg = styled.img`
+	width: 150px;
+	//position: relative;
+`;
+
+export const Itemsbtn = styled.button`
+	display: block;
+	margin: 0 auto;
+	//position: relative;
 `;

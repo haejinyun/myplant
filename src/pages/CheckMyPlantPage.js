@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const CheckMyPlantPageback = styled.div`
 	width: 100%;
 	background-color: rgb(221, 221, 221);
-	height: 914px;
+	height: 100vh;
 `;
 
 function CheckMyPlantPage() {

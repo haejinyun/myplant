@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Title = styled.div`
 	margin-top: 5px;
 	font-size: 50px;
+	margin-bottom: 15px;
 `;
 
 export const TodayFlower = styled.div`
@@ -11,6 +12,7 @@ export const TodayFlower = styled.div`
 	align-items: center;
 	margin: 0 auto;
 	margin-top: 30px;
+
 	border-radius: 20px;
 	//background-color: rgb(238, 238, 238);
 	width: 50%;
@@ -41,6 +43,7 @@ export const Flowerbox = styled.div`
 `;
 
 export const Flowerlang = styled.div`
+	font-weight: bolder;
 	margin-top: 10px;
 	font-size: 20px;
 `;
@@ -49,4 +52,16 @@ export const FlowerContent = styled.div`
 	margin-top: 10px;
 	font-size: 18px;
 	width: 72%;
+`;
+
+export const kakaoBtn = styled.button`
+	border: none;
+	background-color: transparent;
+`;
+
+export const kakaoImg = styled.img`
+	margin-top: 30px;
+	width: 60px;
+	border-radius: 30px;
+	cursor: pointer;
 `;

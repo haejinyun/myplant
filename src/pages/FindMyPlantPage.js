@@ -6,7 +6,7 @@ import FindPlant from '../components/FindMyPlant';
 const FindMyPlantPageback = styled.div`
 	width: 100%;
 	background-color: rgb(221, 221, 221);
-	height: 914px;
+	height: 100vh;
 `;
 
 function FindMyPlantPage() {

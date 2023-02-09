@@ -3,32 +3,30 @@ import { createSlice } from '@reduxjs/toolkit';
 export let filteringSlice = createSlice({
 	name: 'filering', // 리듀서 이름
 	initialState: {
-		light: '1',
+		light: '',
 		grownType: '',
 		flClr: '',
 		flSeason: '',
 		winterTem: '',
 		waterCycle: '',
 		cntN: '',
-		myPick: false,
+		myPickValue: false,
 	}, //초기 값
 	reducers: {
 		//액션 형식 지정
 		filter: (state, action) => {
-			console.log(state);
-			console.log(action.payload.name);
-			let test = Object.keys(state).map(
-				(
-					title //지금 찾은 state의 key값이랑 같아 그러면 그 값의 value를 code로 바꿔줘야해
-				) =>
-					title === action.payload.name
-						? title.filter((e) => (state.e = action.payload.code))
-						: test
-			);
-			// 	let test2 = Object.keys(state)
-			// 		.filter((e) => e === action.payload.name)
-			// 		.map((e) => (e = action.payload.code));
-			// 	return test2;
+			state[action.payload.name] = action.payload.code;
+		},
+		checkCntnsNo: (state, action) => {
+			state.cntN = action.payload;
+		},
+		deleteall: (state, action) => {
+			Object.keys(state).map((item) => {
+				return (state[item] = action.payload);
+			});
+		},
+		myPick: (state, action) => {
+			return (state.myPickValue = action.payload);
 		},
 
 		// myPick: (state, action) => {
@@ -41,6 +39,6 @@ export let filteringSlice = createSlice({
 });
 
 export default filteringSlice.reducer;
-export const { filter, show, mypick } = filteringSlice.actions;
+export const { filter, checkCntnsNo, myPick, deleteall } = filteringSlice.actions;
 
 //? state.filter((item) => item = action.payload.code) : ''

@@ -1,6 +1,11 @@
 //import * as S from './index.styled';
+import ShowCheckMyPlant from './ShowCheckMyPlant';
 function CheckMyPlant() {
-	return <></>;
+  return (
+    <>
+      <ShowCheckMyPlant />
+    </>
+  );
 }
 
 export default CheckMyPlant;

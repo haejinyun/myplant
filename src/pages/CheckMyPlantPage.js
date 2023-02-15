@@ -1,21 +1,21 @@
 import Header from '../components/Header';
-//import Main from '../components/Main';
 import styled from 'styled-components';
-
+import CheckMyPlant from '../components/CheckMyPlant';
 const CheckMyPlantPageback = styled.div`
-	width: 100%;
-	background-color: rgb(221, 221, 221);
-	height: 100vh;
+  width: 100%;
+  background-color: rgb(221, 221, 221);
+  height: 100vh;
 `;
 
 function CheckMyPlantPage() {
-	return (
-		<>
-			<CheckMyPlantPageback>
-				<Header />
-			</CheckMyPlantPageback>
-		</>
-	);
+  return (
+    <>
+      <CheckMyPlantPageback>
+        <Header />
+        <CheckMyPlant />
+      </CheckMyPlantPageback>
+    </>
+  );
 }
 
 export default CheckMyPlantPage;

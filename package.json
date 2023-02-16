@@ -43,5 +43,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://api.nongsaro.go.kr/service/garden"
+  "proxy": "http://api.nongsaro.go.kr/service/garden",
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
 }

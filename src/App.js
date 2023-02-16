@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename='/MyPlant'>
         <Routes>
           <Route element={<MainPage />} path='/' />
           <Route element={<FindMyPlantPage />} path='/findMyPlantPage' />

@@ -18,3 +18,6 @@ function App() {
 }
 
 export default App;
+
+
+//    "start": "react-scripts start",

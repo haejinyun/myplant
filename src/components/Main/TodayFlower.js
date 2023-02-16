@@ -1,7 +1,7 @@
 import * as S from './index.styled';
 import { useEffect, useState } from 'react';
 import XMLParser from 'react-xml-parser';
-import kakaoImg from '../../components/assets/kakaoLogo.png';
+import kakaoImg from '../assets/kakaoLogo.png';
 import { getTodayFlower } from '../../api';
 const KAKAO_KEY = process.env.REACT_APP_KAKAO_KEY;
 

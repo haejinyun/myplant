@@ -1,12 +1,8 @@
 import * as S from './index.styled';
 import React, { useEffect, useState } from 'react';
 
-import Modal from 'react-modal';
-
 function ShowPlant({ show }) {
   const totalDatas = show.data;
-
-  const [modalOpen, setModalOpen] = useState(false);
 
   const [myPickImgs, setMyPickImgs] = useState(
     localStorage.getItem('MyPickImgs') === null ? [] : localStorage.getItem('MyPickImgs').split(',')
@@ -17,10 +13,6 @@ function ShowPlant({ show }) {
       ? []
       : localStorage.getItem('MyPickNames').split(',')
   );
-
-  const changeModalOpen = () => {
-    setModalOpen((curent) => !curent);
-  };
 
   const storageMyPick = (img, name) => {
     setMyPickImgs((prev) => [...prev, img]);
@@ -46,7 +38,6 @@ function ShowPlant({ show }) {
           <div>
             <S.Name>{totalDatas[data2].children[0].value.slice(0, -1)}</S.Name>
             <S.Name>{totalDatas[data2].children[1].value.slice(0, -1)}</S.Name>
-
             <S.Itemsbtn
               onClick={() =>
                 storageMyPick(

@@ -44,7 +44,7 @@ export const Btn = styled.button`
   border: none;
   margin-right: 10px;
   font-weight: bolder;
-  background-color: rgb(101, 136, 100);
+  background-color: rgb(183, 183, 138);
   border-radius: 6px;
   cursor: pointer;
 `;

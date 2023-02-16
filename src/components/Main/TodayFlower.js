@@ -39,7 +39,6 @@ function TodayFlower() {
       .then((res) => {
         const dataset = res.data;
         const filterData = new XMLParser().parseFromString(dataset).children;
-        //console.log(filterData[0].children[3]);
         setToday((prev) => ({
           ...prev,
           img: filterData[0].children[3].children[16].value.slice(0, -1),

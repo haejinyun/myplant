@@ -1,10 +1,10 @@
-import TodatF from './TodayF';
+import TodayFlower from './TodayFlower';
 function Main() {
-	return (
-		<>
-			<TodatF />
-		</>
-	);
+  return (
+    <>
+      <TodayFlower />
+    </>
+  );
 }
 
 export default Main;

@@ -25,33 +25,24 @@ function ShowCheckMyPlant() {
   }, []);
 
   useEffect(() => {
-    //중복만 없애주는 녀석.
     setResultImgs([...new Set(showCheckMyPlantImgs)]);
     setResultNames([...new Set(showCheckMyPlantNames)]);
   }, [showCheckMyPlantImgs, showCheckMyPlantNames]);
 
-  // console.log('showCheckMyPlantImgs: ', showCheckMyPlantImgs);
-  // console.log('showCheckMyPlantNames: ', showCheckMyPlantNames);
-  // useEffect(() => {
-  //   localStorage.setItem('MyPickImgs', showCheckMyPlantImgs);
-  //   localStorage.setItem('MyPickNames', showCheckMyPlantNames);
-  // }, [resultImgs, resultNames]);
-
-  // console.log('SET showCheckMyPlantImgs: ', resultImgs);
-  // console.log('SET showCheckMyPlantNames: ', resultNames);
-  //여기 추가
-
   const deleteMyPlant = (img, name) => {
-    setShowCheckMyPlantImgs(resultImgs.filter((item) => item !== img));
-    setShowCheckMyPlantNames(resultNames.filter((item) => item !== name));
-    localStorage.setItem('MyPickImgs', showCheckMyPlantImgs);
-    localStorage.setItem('MyPickNames', showCheckMyPlantNames);
+    const updatedImgs = resultImgs.filter((item) => item !== img);
+    const updatedNames = resultNames.filter((item) => item !== name);
+    setShowCheckMyPlantImgs(updatedImgs);
+    setShowCheckMyPlantNames(updatedNames);
+    localStorage.setItem('MyPickImgs', updatedImgs);
+    localStorage.setItem('MyPickNames', updatedNames);
   };
 
   useEffect(() => {
-    console.log('이미지 잘 지워지냐', showCheckMyPlantImgs);
-    console.log('이름 잘 지워지냐', showCheckMyPlantNames);
+    console.log('이미지 잘 지워지냐', resultImgs);
+    console.log('이름 잘 지워지냐', resultNames);
   });
+
   const bringMyPlant = resultImgs.map((imgitem, idx) => {
     return (
       <S.EachItem key={imgitem}>

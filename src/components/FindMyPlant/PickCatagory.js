@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 import { filter, deleteall } from '../../redux/filtering';
 import axios from 'axios';
 import XMLParser from 'react-xml-parser';
-//import Pagination from 'react-js-pagination';
 
 import ShowPlant from './ShowPlant';
 
@@ -31,8 +30,6 @@ function PickCatagory() {
     console.log('page:' + page);
     filterPlant(page);
   }, [page]);
-
-  //console.log('test', checklist);
 
   const filterPlant = (nextpage) => {
     axios
@@ -77,11 +74,7 @@ function PickCatagory() {
 
   useEffect(() => {
     setResult([...new Set(option)]);
-    //console.log('선택한 값', result);
   }, [option]);
-
-  //이게 클릭이 되었을때 dispatch와 같이 아래 뜨는걸 해야하는데 이게 비동기 적이다 보니까 이렇네 그러면 useEffect를 써야하는데 이게 어떻게 해야하지
-  // const showOptions = (item) => {
 
   const resetPageNum = () => {
     filterPlant();

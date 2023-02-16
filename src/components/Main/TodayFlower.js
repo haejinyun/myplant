@@ -5,7 +5,7 @@ import kakaoImg from '../../components/assets/kakaoLogo.png';
 import { getTodayFlower } from '../../api';
 const KAKAO_KEY = process.env.REACT_APP_KAKAO_KEY;
 
-function TodayF() {
+function TodayFlower() {
   const [today, setToday] = useState({
     img: '',
     name: '',
@@ -73,4 +73,4 @@ function TodayF() {
     </>
   );
 }
-export default TodayF;
+export default TodayFlower;

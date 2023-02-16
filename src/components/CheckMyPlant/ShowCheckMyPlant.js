@@ -61,4 +61,3 @@ function ShowCheckMyPlant() {
 }
 
 export default ShowCheckMyPlant;
-//      <button onClick={storagetest}>test</button>

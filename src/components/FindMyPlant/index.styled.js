@@ -7,7 +7,7 @@ export const CategoryBlock = styled.div`
   border-radius: 20px;
   background-color: rgb(238, 238, 238);
   width: 60%;
-  height: 230px;
+  height: 245px;
 `;
 export const CategoryLine = styled.div`
   display: flex;
@@ -22,7 +22,6 @@ export const CategoryName = styled.div`
 export const Categoryitems = styled.div`
   display: flex;
   margin-top: 8px;
-  //justify-content: space-around;
 `;
 export const InputS = styled.input`
   appearance: none;
@@ -32,11 +31,10 @@ export const InputS = styled.input`
 export const Result = styled.div`
   margin-top: 8px;
   margin-left: 40px;
-  //justify-content: space-around;
 `;
 export const Btnpart = styled.div`
   display: flex;
-  margin-top: 5px;
+  margin-top: 15px;
   justify-content: center;
 `;
 export const Btn = styled.button`
@@ -69,7 +67,7 @@ export const TotalPlant = styled.div`
   grid-template-columns: repeat(4, 1fr);
   gap: 20px 40px;
   margin-top: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 `;
 
 export const ClickPart = styled.div``;
@@ -90,11 +88,7 @@ export const EachItem = styled.div`
 `;
 
 export const Name = styled.div`
-  //display: flex;
-  //flex-direction: column;
-  //align-items: center;
   text-align: center;
-  //position: relative;
 `;
 
 export const ItemsImg = styled.img`
@@ -106,7 +100,6 @@ export const Itemsbtn = styled.button`
   display: block;
   margin: 0 auto;
   border: none;
-  //font-weight: bolder;
   background-color: white;
   border-radius: 6px;
   cursor: pointer;

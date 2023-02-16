@@ -11,7 +11,6 @@ export const Title = styled.div`
 export const TotalPlant = styled.div`
   display: grid;
   margin: 0 auto;
-  //place-items: center;
   width: 80%;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px 40px;
@@ -27,6 +26,7 @@ export const EachItem = styled.div`
 `;
 
 export const Name = styled.div`
+  margin-top: 8px;
   text-align: center;
 `;
 
@@ -37,4 +37,9 @@ export const ItemsImg = styled.img`
 export const Itemsbtn = styled.button`
   display: block;
   margin: 0 auto;
+  margin-top: 5px;
+  border: none;
+  background-color: white;
+  border-radius: 6px;
+  cursor: pointer;
 `;

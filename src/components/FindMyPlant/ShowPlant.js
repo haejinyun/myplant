@@ -67,12 +67,6 @@ function ShowPlant({ show }) {
   return (
     <>
       <S.TotalPlant>{typeof totalDatas === 'object' ? bringCntsNDatas : 'null'}</S.TotalPlant>
-
-      <Modal isOpen={modalOpen} onRequestClose={() => changeModalOpen()}>
-        <button onClick={changeModalOpen}>x</button>
-
-        <p>상세 페이지</p>
-      </Modal>
     </>
   );
 }

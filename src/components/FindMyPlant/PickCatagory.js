@@ -98,17 +98,19 @@ function PickCatagory() {
             </S.CategoryLine>
           ))}
         </div>
-        <button onClick={resetPageNum}>조회</button>
-        <button onClick={reset}>초기화</button>
-        <div>{result + ' '}</div>
+        <S.Btnpart>
+          <S.Btn onClick={resetPageNum}>조회</S.Btn>
+          <S.Btn onClick={reset}>초기화</S.Btn>
+        </S.Btnpart>
+        <S.Result>{result + ' '}</S.Result>
       </S.CategoryBlock>
       <div>
         <ShowPlant show={show}></ShowPlant>
       </div>
       <S.Page>
-        {page !== 1 && <button onClick={handlePrvePageChange}>{'<'}</button>}
-        <div>{page}</div>
-        {totalitem === 8 && <button onClick={handleNextPageChange}>{'>'}</button>}
+        {page !== 1 && <S.Pagebtn onClick={handlePrvePageChange}>{'<'}</S.Pagebtn>}
+        <S.PageNum>{page}</S.PageNum>
+        {totalitem === 8 && <S.Pagebtn onClick={handleNextPageChange}>{'>'}</S.Pagebtn>}
       </S.Page>
     </>
   );

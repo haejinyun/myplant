@@ -26,6 +26,7 @@ function PickCatagory() {
   const handlePrvePageChange = () => {
     setPage((curent) => curent - 1);
   };
+
   useEffect(() => {
     console.log('page:' + page);
     filterPlant(page);
@@ -33,7 +34,7 @@ function PickCatagory() {
 
   const filterPlant = (nextpage) => {
     axios
-      .get('http://api.nongsaro.go.kr/service/garden/gardenList', {
+      .get('/api', {
         //env파일 알아보고 거기에 key넣기
         params: {
           //필터링한 값을 넣는 부분
@@ -58,13 +59,10 @@ function PickCatagory() {
   };
 
   let totalitem = show.data.length - 3; //이게 총 아이템의 갯수
-  //console.log(totalitem);
 
   const optionSetting = (item) => {
     dispatch(filter({ name: item.eng, code: item.value }));
     setOption((prev) => [...prev, item.name]);
-
-    //console.log(typeof result1);
   };
 
   const reset = () => {
@@ -73,7 +71,7 @@ function PickCatagory() {
   };
 
   useEffect(() => {
-    setResult([...new Set(option)]);
+    setResult([...new Set(option)]); //중복 제외
   }, [option]);
 
   const resetPageNum = () => {

@@ -25,7 +25,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "num run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -49,5 +49,6 @@
   "proxy": "http://api.nongsaro.go.kr/service/garden",
   "devDependencies": {
     "gh-pages": "^5.0.0"
-  }
+  },
+  "homepage": "http://haejinyun.github.io/myplant"
 }

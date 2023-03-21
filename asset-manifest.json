@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/myplant/static/js/main.ab3999a7.js",
+    "index.html": "/myplant/index.html",
+    "main.ab3999a7.js.map": "/myplant/static/js/main.ab3999a7.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.ab3999a7.js"
+  ]
+}
